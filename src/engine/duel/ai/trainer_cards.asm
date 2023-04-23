@@ -157,9 +157,9 @@ AIPlay_Potion:
 	ldh [hTemp_ffa0], a
 	ld e, a
 	call GetCardDamageAndMaxHP
-	cp 20
+	cp 30
 	jr c, .play_card
-	ld a, 20
+	ld a, 30
 .play_card
 	ldh [hTempPlayAreaLocation_ffa1], a
 	ld a, OPPACTION_EXECUTE_TRAINER_EFFECTS
@@ -225,7 +225,7 @@ AIDecide_Potion2:
 	ld h, a
 	ld e, PLAY_AREA_ARENA
 	call GetCardDamageAndMaxHP
-	cp 20 + 1  ; if damage <= 20
+	cp 20 + 1  ; if damage <= 30
 	jr c, .calculate_hp
 	ld a, 20
 ; return if using healing prevents KO.
@@ -2365,11 +2365,6 @@ AIDecide_ProfessorOak:
 	add $0a
 	ld [wce06], a
 
-; this part seems buggy
-; the AI loops through all the cards in hand and checks
-; if any of them is not a Pokemon card and has Basic stage.
-; it seems like the intention was that if there was
-; any Basic Pokemon still in hand, the AI would add to the score.
 .check_hand
 	call CreateHandCardList
 	ld hl, wDuelTempList
@@ -2381,7 +2376,7 @@ AIDecide_ProfessorOak:
 	call LoadCardDataToBuffer1_FromDeckIndex
 	ld a, [wLoadedCard1Type]
 	cp TYPE_ENERGY
-	jr c, .loop_hand ; bug, should be jr nc
+	jr nc, .loop_hand 
 
 	ld a, [wLoadedCard1Stage]
 	or a
@@ -3279,14 +3274,11 @@ AIDecide_EnergySearch:
 	scf
 	ret
 
-; this subroutine has a bug.
-; it was supposed to use the .CheckUsefulGrassEnergy subroutine
-; but uses .CheckUsefulFireOrLightningEnergy instead.
 .wonders_of_science
 	ld a, CARD_LOCATION_DECK
 	call FindBasicEnergyCardsInLocation
 	jr c, .no_carry
-	call .CheckUsefulFireOrLightningEnergy
+	call .CheckUsefulGrassEnergy
 	jr c, .no_carry
 	scf
 	ret
@@ -3510,13 +3502,12 @@ AIDecide_Pokedex:
 ; to use PickPokedexCards_Unreferenced instead
 	ld a, [wOpponentDeckID]
 	cp WONDERS_OF_SCIENCE_DECK_ID
-	jp PickPokedexCards ; bug, should be jp nz
+	jp nz, PickPokedexCards
+	; fallthrough
 
 ; picks order of the cards in deck from the effects of Pokedex.
 ; prioritizes Pokemon cards, then Trainer cards, then energy cards.
 ; stores the resulting order in wce1a.
-PickPokedexCards_Unreferenced:
-; unreferenced
 	xor a
 	ld [wAIPokedexCounter], a ; reset counter
 
@@ -4648,9 +4639,9 @@ AIDecide_Revive:
 	cp HITMONLEE
 	jr z, .set_carry
 	cp TAUROS
-	jr nz, .loop_discard_pile ; bug, these two lines should be swapped
+	jr z, .set_carry
 	cp KANGASKHAN
-	jr z, .set_carry ; bug, these two lines should be swapped
+	jr nz, .loop_discard_pile 
 
 .set_carry
 	ld a, b
@@ -5847,7 +5838,7 @@ AIDecide_PokemonTrader_PowerGenerator:
 	ld b, PIKACHU_LV12
 	ld a, RAICHU_LV40
 	call LookForCardIDInDeck_GivenCardIDInHandAndPlayArea
-	jr c, .find_duplicates
+	jp c, .find_duplicates
 	ld a, PIKACHU_LV14
 	ld b, RAICHU_LV40
 	call LookForCardIDInDeck_GivenCardIDInHand
@@ -5904,7 +5895,7 @@ AIDecide_PokemonTrader_PowerGenerator:
 	ld b, MAGNETON_LV28
 	call LookForCardIDInDeck_GivenCardIDInHand
 	jr c, .find_duplicates
-	; bug, missing jr .no_carry
+	jr .no_carry
 
 ; since this last check falls through regardless of result,
 ; register a might hold an invalid deck index,
@@ -5923,6 +5914,8 @@ AIDecide_PokemonTrader_PowerGenerator:
 	ret
 .set_carry
 	scf
+	; fallthrough
+	.no_carry
 	ret
 
 AIDecide_PokemonTrader_FlowerGarden:

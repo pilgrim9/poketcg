@@ -100,10 +100,8 @@ PotionName:
 	done
 
 PotionDescription:
-	text "Remove 2 damage counters from 1 of"
-	line "your Pokémon. If that Pokémon has"
-	line "fewer damage counters than that,"
-	line "remove all of them."
+	text "Remove up to 3 damage counters"
+	line "from 1 of your Pokémon."
 	done
 
 SuperPotionName:
@@ -113,10 +111,8 @@ SuperPotionName:
 SuperPotionDescription:
 	text "Discard 1 Energy card attached to 1"
 	line "of your own Pokémon in order to"
-	line "remove 4 damage counters from that"
-	line "Pokémon. If the Pokémon has fewer"
-	line "damage counters than that, remove"
-	line "all of them."
+	line "remove up to 5 damage counters from"
+	line "that Pokémon."
 	done
 
 FullHealName:

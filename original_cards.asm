@@ -2946,7 +2946,7 @@ FlareonLv22Card:
 	db DIAMOND ; rarity
 	db MYSTERY | GB ; sets
 	db FLAREON_LV22
-	db 70 ; hp
+	db 60 ; hp
 	db STAGE1 ; stage
 	tx EeveeName ; pre-evo name
 
@@ -4240,7 +4240,7 @@ StarmieCard:
 	db ATK_ANIM_RECOVER ; animation
 
 	; attack 2
-	energy WATER, 2, COLORLESS, 1 ; energies
+	energy WATER, 1, COLORLESS, 2 ; energies
 	tx StarFreezeName ; name
 	tx MayInflictParalysisDescription ; description
 	dw NONE ; description (cont)
@@ -4425,7 +4425,7 @@ VaporeonLv29Card:
 	db DIAMOND ; rarity
 	db MYSTERY | GB ; sets
 	db VAPOREON_LV29
-	db 70 ; hp
+	db 60 ; hp
 	db STAGE1 ; stage
 	tx EeveeName ; pre-evo name
 
@@ -5649,7 +5649,7 @@ JolteonLv24Card:
 	db DIAMOND ; rarity
 	db MYSTERY | GB ; sets
 	db JOLTEON_LV24
-	db 70 ; hp
+	db 60 ; hp
 	db STAGE1 ; stage
 	tx EeveeName ; pre-evo name
 
@@ -5668,11 +5668,11 @@ JolteonLv24Card:
 	db ATK_ANIM_HIT ; animation
 
 	; attack 2
-	energy COLORLESS, 3 ; energies
+	energy COLORLESS, 4 ; energies
 	tx StunNeedleName ; name
 	tx MayInflictParalysisDescription ; description
 	dw NONE ; description (cont)
-	db 20 ; damage
+	db 30 ; damage
 	db DAMAGE_NORMAL ; category
 	dw JolteonStunNeedleEffectCommands ; effect commands
 	db INFLICT_PARALYSIS ; flags 1
@@ -7300,7 +7300,7 @@ SlowpokeLv18Card:
 	db ATK_ANIM_NONE ; animation
 
 	; attack 2
-	energy PSYCHIC, 1 ; energies
+	energy PSYCHIC, 2 ; energies
 	tx ScavengeName ; name
 	tx ScavengeDescription ; description
 	dw NONE ; description (cont)
@@ -8269,7 +8269,7 @@ Pidgeot1Card:
 	db ATK_ANIM_WHIRLWIND_ZIGZAG ; animation
 
 	; attack 2
-	energy COLORLESS, 3 ; energies
+	energy COLORLESS, 4 ; energies
 	tx GaleName ; name
 	tx GaleDescription ; description
 	dw NONE ; description (cont)

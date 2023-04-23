@@ -32,42 +32,37 @@ AIActionTable_FireCharge:
 	ret
 
 .list_arena
-	db JIGGLYPUFF_LV14
+	db MAGMAR_LV31
 	db CHANSEY
-	db TAUROS
-	db MAGMAR_LV24
-	db JIGGLYPUFF_LV12
+	db DODUO
 	db GROWLITHE
 	db $00
 
 .list_bench
-	db JIGGLYPUFF_LV14
-	db CHANSEY
+	db DODUO
 	db GROWLITHE
+	db CHANSEY
 	db MAGMAR_LV24
-	db JIGGLYPUFF_LV12
-	db TAUROS
 	db $00
 
 .list_retreat
-	ai_retreat JIGGLYPUFF_LV12, -1
 	ai_retreat CHANSEY,         -1
+	ai_retreat DODUO,           -1
+	ai_retreat DODRIO,          -1
 	ai_retreat GROWLITHE,       -1
 	db $00
 
 .list_energy
-	ai_energy GROWLITHE,       3, +0
-	ai_energy ARCANINE_LV45,   4, +0
-	ai_energy MAGMAR_LV24,     3, +0
-	ai_energy JIGGLYPUFF_LV12, 3, +0
-	ai_energy JIGGLYPUFF_LV14, 2, +0
-	ai_energy WIGGLYTUFF,      3, +0
+	ai_energy GROWLITHE,       2, +0
+	ai_energy ARCANINE_LV45,   4, +1
+	ai_energy ARCANINE_LV34,   2, +1
+	ai_energy MAGMAR_LV24,     2, +0
 	ai_energy CHANSEY,         4, +0
-	ai_energy TAUROS,          3, +0
 	db $00
 
 .list_prize
 	db GAMBLER
+	db ARCANINE_LV34
 	db $00
 
 .store_list_pointers
@@ -75,6 +70,6 @@ AIActionTable_FireCharge:
 	store_list_pointer wAICardListArenaPriority, .list_arena
 	store_list_pointer wAICardListBenchPriority, .list_bench
 	store_list_pointer wAICardListPlayFromHandPriority, .list_bench
-	; missing store_list_pointer wAICardListRetreatBonus, .list_retreat
+	store_list_pointer wAICardListRetreatBonus, .list_retreat
 	store_list_pointer wAICardListEnergyBonus, .list_energy
 	ret

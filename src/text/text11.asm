@@ -88,7 +88,7 @@ RecoverName:
 	done
 
 StarmiesRecoverDescription:
-	text "Discard 1 <WATER> Energy card attached to"
+	text "Discard 1 <PSYCHIC> Energy card attached to"
 	line "Starmie in order to use this attack."
 	line "Remove all damage counters from"
 	line "Starmie."

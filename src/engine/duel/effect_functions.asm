@@ -95,9 +95,6 @@ TossCoinATimes_BankB:
 	call TossCoinATimes
 	ret
 
-CommentedOut_2c086:
-	ret
-
 Func_2c087:
 	xor a
 	jr Func_2c08c
@@ -3093,8 +3090,8 @@ VaporeonWaterGunEffect:
 StarmieRecover_CheckEnergyHP:
 	ld e, PLAY_AREA_ARENA
 	call GetPlayAreaCardAttachedEnergies
-	ld a, [wAttachedEnergies + WATER]
-	ldtx hl, NotEnoughWaterEnergyText
+	ld a, [wAttachedEnergies + PSYCHIC]
+	ldtx hl, NotEnoughPsychicEnergyText
 	cp 1
 	ret c ; return if not enough energy
 	call GetCardDamageAndMaxHP
@@ -3103,7 +3100,7 @@ StarmieRecover_CheckEnergyHP:
 	ret ; return carry if no damage
 
 StarmieRecover_PlayerSelectEffect:
-	ld a, TYPE_ENERGY_WATER
+	ld a, TYPE_ENERGY_PSYCHIC
 	call CreateListOfEnergyAttachedToArena
 	xor a ; PLAY_AREA_ARENA
 	bank1call DisplayEnergyDiscardScreen
@@ -3115,7 +3112,7 @@ StarmieRecover_PlayerSelectEffect:
 	ret
 
 StarmieRecover_AISelectEffect:
-	ld a, TYPE_ENERGY_WATER
+	ld a, TYPE_ENERGY_PSYCHIC
 	call CreateListOfEnergyAttachedToArena
 	ld a, [wDuelTempList] ; pick first card
 	ldh [hTemp_ffa0], a
@@ -8856,8 +8853,8 @@ SuperPotion_PlayerSelectEffect:
 ; cap the healing damage if
 ; it would make it exceed max HP.
 	call GetCardDamageAndMaxHP
-	ld c, 40
-	cp 40
+	ld c, 50
+	cp 50
 	jr nc, .heal
 	ld c, a
 .heal
@@ -9219,8 +9216,8 @@ Potion_PlayerSelection:
 	or a
 	jr z, .read_input ; no damage, loop back to start
 ; cap damage
-	ld c, 20
-	cp 20
+	ld c, 30
+	cp 30
 	jr nc, .skip_cap
 	ld c, a
 .skip_cap

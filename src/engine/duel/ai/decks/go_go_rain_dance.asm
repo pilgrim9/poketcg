@@ -33,39 +33,37 @@ AIActionTable_GoGoRainDance:
 
 .list_arena
 	db LAPRAS
-	db HORSEA
-	db GOLDEEN
+	db SQUIRTLE
+	db MAGIKARP
 	db SQUIRTLE
 	db $00
 
 .list_bench
+	db MAGIKARP
 	db SQUIRTLE
-	db HORSEA
-	db GOLDEEN
 	db LAPRAS
 	db $00
 
 .list_retreat
-	ai_retreat SQUIRTLE,  -3
+	ai_retreat MAGIKARP,  -200
+	ai_retreat SQUIRTLE,  -2
 	ai_retreat WARTORTLE, -2
-	ai_retreat HORSEA,    -1
+	ai_retreat BLASTOISE, -1
+	ai_retreat GYARADOS,  +1
 	db $00
 
 .list_energy
-	ai_energy SQUIRTLE,  2, +0
+	ai_energy SQUIRTLE,  1, +0
 	ai_energy WARTORTLE, 3, +0
-	ai_energy BLASTOISE, 5, +0
-	ai_energy GOLDEEN,   1, +0
-	ai_energy SEAKING,   2, +0
-	ai_energy HORSEA,    2, +0
-	ai_energy SEADRA,    3, +0
-	ai_energy LAPRAS,    3, +0
+	ai_energy BLASTOISE, 5, +1
+	ai_energy GYARADOS,  4, +2
+	ai_energy MAGIKARP,  2, +2
+	ai_energy LAPRAS,    2, +0
 	db $00
 
 .list_prize
-	db GAMBLER
 	db ENERGY_RETRIEVAL
-	db SUPER_ENERGY_RETRIEVAL
+	db GYARADOS
 	db BLASTOISE
 	db $00
 
@@ -74,6 +72,6 @@ AIActionTable_GoGoRainDance:
 	store_list_pointer wAICardListArenaPriority, .list_arena
 	store_list_pointer wAICardListBenchPriority, .list_bench
 	store_list_pointer wAICardListPlayFromHandPriority, .list_bench
-	; missing store_list_pointer wAICardListRetreatBonus, .list_retreat
+	store_list_pointer wAICardListRetreatBonus, .list_retreat
 	store_list_pointer wAICardListEnergyBonus, .list_energy
 	ret

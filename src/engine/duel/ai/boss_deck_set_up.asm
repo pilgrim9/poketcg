@@ -131,13 +131,8 @@ SetUpBossStartingHandAndDeck:
 	jr nz, .draw_loop
 	ret
 
-; expectation: return carry if card ID corresponding
+; return carry if card ID corresponding
 ; to the input deck index is listed in wAICardListAvoidPrize;
-; reality: always returns no carry because when checking terminating
-; byte in wAICardListAvoidPrize ($00), it wrongfully uses 'cp a' instead of 'or a',
-; so it always ends up returning in the first item in list.
-; input:
-;	- a = deck index of card to check
 .CheckIfIDIsInList
 	ld b, a
 	ld a, [wAICardListAvoidPrize + 1]
@@ -152,7 +147,7 @@ SetUpBossStartingHandAndDeck:
 	call GetCardIDFromDeckIndex
 .loop_id_list
 	ld a, [hli]
-	cp a ; bug, should be 'or a'
+	or a
 	jr z, .false
 	cp e
 	jr nz, .loop_id_list
