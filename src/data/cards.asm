@@ -1590,7 +1590,7 @@ VenomothCard:
 	; attack 2
 	energy GRASS, 2 ; energies
 	tx VenomPowderName ; name
-	tx VenomPowderDescription ; description
+	tx FoulGasDescription ; description
 	dw NONE ; description (cont)
 	db 10 ; damage
 	db DAMAGE_NORMAL ; category
@@ -9474,7 +9474,7 @@ PorygonCard:
 	db DIAMOND ; rarity
 	db LABORATORY | NONE ; sets
 	db PORYGON
-	db 30 ; hp
+	db 50 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -9483,7 +9483,7 @@ PorygonCard:
 	tx Conversion1Name ; name
 	tx Conversion1Description ; description
 	dw NONE ; description (cont)
-	db 0 ; damage
+	db 10 ; damage
 	db DAMAGE_NORMAL ; category
 	dw PorygonConversion1EffectCommands ; effect commands
 	db NONE ; flags 1
@@ -9497,7 +9497,7 @@ PorygonCard:
 	tx Conversion2Name ; name
 	tx Conversion2Description ; description
 	dw NONE ; description (cont)
-	db 0 ; damage
+	db 10 ; damage
 	db RESIDUAL ; category
 	dw PorygonConversion2EffectCommands ; effect commands
 	db NONE ; flags 1

@@ -300,8 +300,8 @@ VenomothShiftEffectCommands:
 	db  $00
 
 VenomothVenomPowderEffectCommands:
-	dbw EFFECTCMDTYPE_BEFORE_DAMAGE, VenomPowder_PoisonConfusion50PercentEffect
-	dbw EFFECTCMDTYPE_AI, VenomPowder_AIEffect
+	dbw EFFECTCMDTYPE_BEFORE_DAMAGE, FoulGas_PoisonOrConfusionEffect
+	dbw EFFECTCMDTYPE_AI, FoulGas_AIEffect
 	db  $00
 
 TangelaBindEffectCommands:
