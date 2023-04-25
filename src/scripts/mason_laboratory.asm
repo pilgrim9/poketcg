@@ -402,7 +402,7 @@ Script_EnterLabFirstTime:
 
 .ows_d80c
 	print_npc_text Text05e9
-	ask_question_jump_default_yes NULL, .ows_d817
+	ask_question_jump_default_yes NULL, quit_script_fully ;.ows_d817
 	script_jump .ows_d7bc
 
 .ows_d817

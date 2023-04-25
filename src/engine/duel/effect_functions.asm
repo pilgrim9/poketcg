@@ -4095,7 +4095,7 @@ DancingEmbers_MultiplierEffect:
 	ld hl, 10
 	call LoadTxRam3
 	ldtx de, DamageCheckIfHeadsXDamageText
-	ld a, 8
+	ld a, 6
 	call TossCoinATimes_BankB
 	call ATimes10
 	call SetDefiniteDamage

@@ -1579,27 +1579,23 @@ FlowerGardenDeck:
 
 KaleidoscopeDeck:
 	deck_list_start
-	card_item GRASS_ENERGY,            10
-	card_item FIRE_ENERGY,              4
-	card_item WATER_ENERGY,             4
-	card_item LIGHTNING_ENERGY,         4
-	card_item DOUBLE_COLORLESS_ENERGY,  3
+	card_item GRASS_ENERGY,            12
+	card_item DOUBLE_COLORLESS_ENERGY,  4
 	card_item VENONAT,                  3
-	card_item VENOMOTH,                 2
-	card_item FLAREON_LV22,             1
-	card_item FLAREON_LV28,             1
-	card_item VAPOREON_LV29,            1
-	card_item VAPOREON_LV42,            1
-	card_item JOLTEON_LV24,             1
-	card_item JOLTEON_LV29,             1
-	card_item DITTO,                    4
+	card_item VENOMOTH,                 3
+	card_item FLAREON_LV22,             2
+	card_item VAPOREON_LV29,            2
+	card_item JOLTEON_LV24,             2
 	card_item EEVEE,                    4
-	card_item PORYGON,                  4
-	card_item BILL,                     2
-	card_item MR_FUJI,                  2
-	card_item ENERGY_SEARCH,            2
-	card_item SWITCH,                   4
-	card_item GUST_OF_WIND,             2
+	card_item PORYGON,                  1
+	card_item BILL,                     4
+	card_item MR_FUJI, 	        		3
+	card_item ENERGY_REMOVAL,           4
+	card_item SWITCH,                   3
+	card_item GUST_OF_WIND,             4
+	card_item PROFESSOR_OAK,			3
+	card_item POTION, 				    3
+	card_item POKEMON_TRADER, 		    3
 	deck_list_end
 	tx KaleidoscopeDeckName
 

@@ -393,18 +393,23 @@ AIDecideSpecialEvolutions:
 	ld a, [wOpponentDeckID]
 	cp LEGENDARY_DRAGONITE_DECK_ID
 	jr z, .legendary_dragonite
-	cp INVINCIBLE_RONALD_DECK_ID
-	jr z, .invincible_ronald
 	cp LEGENDARY_RONALD_DECK_ID
 	jr z, .legendary_ronald
+	jp .always
+	ret
+
+.always
+	ld a, [wLoadedCard2ID]
+	cp MAGIKARP
+	jr z, .magikarp
+	cp GRIMER
+	jr z, .grimer
 	ret
 
 .legendary_dragonite
 	ld a, [wLoadedCard2ID]
 	cp CHARMELEON
 	jr z, .charmeleon
-	cp MAGIKARP
-	jr z, .magikarp
 	cp DRAGONAIR
 	jr z, .dragonair
 	ret
@@ -439,17 +444,12 @@ AIDecideSpecialEvolutions:
 	ret z
 	ld e, a
 	call CountNumberOfEnergyCardsAttached
-	cp 2
+	cp 1
 	ret c
 	ld a, 3
 	call AddToAIScore
 	ret
 
-.invincible_ronald
-	ld a, [wLoadedCard2ID]
-	cp GRIMER
-	jr z, .grimer
-	ret
 
 ; check if Grimer is not active card
 .grimer

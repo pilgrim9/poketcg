@@ -56,8 +56,8 @@ AIActionTable_GoGoRainDance:
 	ai_energy SQUIRTLE,  1, +0
 	ai_energy WARTORTLE, 3, +0
 	ai_energy BLASTOISE, 5, +1
-	ai_energy GYARADOS,  4, +2
-	ai_energy MAGIKARP,  2, +2
+	ai_energy GYARADOS,  4, +4
+	ai_energy MAGIKARP,  2, +3
 	ai_energy LAPRAS,    2, +0
 	db $00
 

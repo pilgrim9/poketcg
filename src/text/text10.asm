@@ -920,7 +920,7 @@ DancingEmbersName:
 	done
 
 DancingEmbersDescription:
-	text "Flip 8 coins. This attack does 10"
+	text "Flip 6 coins. This attack does 10"
 	line "damage times the number of heads."
 	done
 
