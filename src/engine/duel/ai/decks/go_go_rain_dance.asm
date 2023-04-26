@@ -45,18 +45,19 @@ AIActionTable_GoGoRainDance:
 	db $00
 
 .list_retreat
-	ai_retreat MAGIKARP,  -200
-	ai_retreat SQUIRTLE,  -2
-	ai_retreat WARTORTLE, -2
-	ai_retreat BLASTOISE, -1
-	ai_retreat GYARADOS,  +1
+	ai_retreat MAGIKARP,  31
+	ai_retreat SQUIRTLE,  10
+	ai_retreat WARTORTLE, 10
+	ai_retreat LAPRAS, 3
+	ai_retreat BLASTOISE, 5
+	ai_retreat GYARADOS,  0
 	db $00
 
 .list_energy
 	ai_energy SQUIRTLE,  1, +0
 	ai_energy WARTORTLE, 3, +0
 	ai_energy BLASTOISE, 5, +1
-	ai_energy GYARADOS,  4, +4
+	ai_energy GYARADOS,  4, +10
 	ai_energy MAGIKARP,  2, +3
 	ai_energy LAPRAS,    2, +0
 	db $00
@@ -65,6 +66,9 @@ AIActionTable_GoGoRainDance:
 	db ENERGY_RETRIEVAL
 	db GYARADOS
 	db BLASTOISE
+	db SQUIRTLE
+	db WARTORTLE
+	db BILL
 	db $00
 
 .store_list_pointers

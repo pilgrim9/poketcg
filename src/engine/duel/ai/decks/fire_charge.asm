@@ -46,22 +46,22 @@ AIActionTable_FireCharge:
 	db $00
 
 .list_retreat
-	ai_retreat CHANSEY,         -1
-	ai_retreat DODUO,           -1
-	ai_retreat DODRIO,          -1
-	ai_retreat GROWLITHE,       -1
+	ai_retreat CHANSEY,         2
+	ai_retreat DODUO,           2
+	ai_retreat DODRIO,          2
+	ai_retreat GROWLITHE,       2
 	db $00
 
 .list_energy
 	ai_energy GROWLITHE,       2, +0
-	ai_energy ARCANINE_LV45,   4, +1
-	ai_energy ARCANINE_LV34,   2, +1
+	ai_energy ARCANINE_LV45,   4, +2
+	ai_energy ARCANINE_LV34,   2, +2
 	ai_energy MAGMAR_LV24,     2, +0
 	ai_energy CHANSEY,         4, +0
 	db $00
 
 .list_prize
-	db GAMBLER
+	db BILL
 	db ARCANINE_LV34
 	db $00
 

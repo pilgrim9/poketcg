@@ -2079,12 +2079,12 @@ TangelaLv8Card:
 	db CIRCLE ; rarity
 	db LABORATORY | NONE ; sets
 	db TANGELA_LV8
-	db 50 ; hp
+	db 70 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
 	; attack 1
-	energy GRASS, 1 ; energies
+	energy GRASS, 1, COLORLESS, 1 ; energies
 	tx BindName ; name
 	tx MayInflictParalysisDescription ; description
 	dw NONE ; description (cont)
@@ -2130,7 +2130,7 @@ TangelaLv12Card:
 	db CIRCLE ; rarity
 	db COLOSSEUM | GB ; sets
 	db TANGELA_LV12
-	db 50 ; hp
+	db 60 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -4124,7 +4124,7 @@ SeakingCard:
 	tx GoldeenName ; pre-evo name
 
 	; attack 1
-	energy WATER, 1 ; energies
+	energy COLORLESS, 1 ; energies
 	tx HornAttackName ; name
 	dw NONE ; description
 	dw NONE ; description (cont)

@@ -1,5 +1,6 @@
 INCLUDE "macros.asm"
 INCLUDE "constants.asm"
+INCLUDE "struct-macros.asm"
 
 SECTION "Game Loop", ROMX
 INCLUDE "engine/game_loop.asm"

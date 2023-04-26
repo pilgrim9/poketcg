@@ -684,7 +684,7 @@ AIDecideBenchPokemonToSwitchTo:
 	cp MR_MIME
 	jr z, .raise_score
 	cp MEW_LV8
-	jr nz, .asm_15cf0
+	jr nz, .asm_15cf0 ; If it's not mew
 	ld a, DUELVARS_ARENA_CARD
 	call GetNonTurnDuelistVariable
 	call LoadCardDataToBuffer2_FromDeckIndex
@@ -710,12 +710,14 @@ AIDecideBenchPokemonToSwitchTo:
 	cp MYSTERIOUS_FOSSIL
 	jr z, .lower_score_2
 	cp CLEFAIRY_DOLL
-	jr nz, .ai_score_bonus
+	jr z, .lower_score_2
+	jr .ai_score_bonus
 .lower_score_2
 	ld a, 10
 	call SubFromAIScore
 
 .ai_score_bonus
+	ld a, [wLoadedCard1ID]
 	ld b, a
 	ld a, [wAICardListRetreatBonus + 1]
 	or a

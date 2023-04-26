@@ -1063,22 +1063,24 @@ ZappingSelfdestructDeck:
 
 FlowerPowerDeck:
 	deck_list_start
-	card_item GRASS_ENERGY,     18
-	card_item PSYCHIC_ENERGY,    4
-	card_item BULBASAUR,         4
-	card_item IVYSAUR,           3
+	card_item GRASS_ENERGY,     16
+	card_item PSYCHIC_ENERGY,    2
+	card_item BULBASAUR,         3
+	card_item IVYSAUR,           2
 	card_item VENUSAUR_LV67,     2
-	card_item ODDISH,            4
-	card_item GLOOM,             3
-	card_item VILEPLUME,         2
-	card_item EXEGGCUTE,         4
+	card_item VENUSAUR_LV64,     1
+	card_item ODDISH,            3
+	card_item GLOOM,             2
+	card_item VILEPLUME,         3
+	card_item EXEGGCUTE,         3
 	card_item EXEGGUTOR,         3
-	card_item PROFESSOR_OAK,     2
-	card_item BILL,              3
-	card_item POKEMON_BREEDER,   2
-	card_item ENERGY_RETRIEVAL,  2
-	card_item SWITCH,            2
-	card_item POTION,            2
+	card_item PROFESSOR_OAK,     3
+	card_item ENERGY_RETRIEVAL,  1
+	card_item BILL,              4
+	card_item POKEMON_BREEDER,   4
+	card_item SWITCH,            3
+	card_item POTION,            3
+	card_item ENERGY_REMOVAL,    4
 	deck_list_end
 	tx FlowerPowerDeckName
 
@@ -1525,55 +1527,41 @@ PowerGeneratorDeck:
 
 EtceteraDeck:
 	deck_list_start
-	card_item GRASS_ENERGY,     8
-	card_item FIRE_ENERGY,      4
-	card_item LIGHTNING_ENERGY, 4
-	card_item FIGHTING_ENERGY,  4
-	card_item PSYCHIC_ENERGY,   4
-	card_item CATERPIE,         1
-	card_item WEEDLE,           1
-	card_item NIDORANF,         2
-	card_item ODDISH,           2
-	card_item TANGELA_LV12,     2
-	card_item CHARMANDER,       2
-	card_item MAGMAR_LV31,      1
-	card_item PIKACHU_LV12,     2
-	card_item MAGNEMITE_LV13,   1
-	card_item DIGLETT,          1
-	card_item MACHOP,           2
-	card_item GASTLY_LV8,       2
-	card_item JYNX,             1
-	card_item BILL,             3
-	card_item ENERGY_RETRIEVAL, 2
-	card_item ENERGY_SEARCH,    3
-	card_item POKE_BALL,        3
-	card_item PLUSPOWER,        3
-	card_item DEFENDER,         2
+	card_item GRASS_ENERGY,     14
+	card_item DOUBLE_COLORLESS_ENERGY, 4
+	card_item WEEDLE, 		 	3
+	card_item KAKUNA, 		 	2
+	card_item BEEDRILL, 	 	3
+	card_item SCYTHER, 		 	2
+	card_item PINSIR, 		    2
+	card_item BILL,             4
+	card_item PLUSPOWER,        4
+	card_item PROFESSOR_OAK,    4
+	card_item ITEM_FINDER,      2
+	card_item ENERGY_REMOVAL,   4
+	card_item POKEMON_TRADER,   2
+	card_item GUST_OF_WIND,     4
 	deck_list_end
 	tx EtceteraDeckName
 
 FlowerGardenDeck:
 	deck_list_start
-	card_item GRASS_ENERGY,            24
-	card_item DOUBLE_COLORLESS_ENERGY,  2
-	card_item BULBASAUR,                3
-	card_item IVYSAUR,                  2
-	card_item VENUSAUR_LV67,            2
-	card_item ODDISH,                   3
-	card_item GLOOM,                    2
-	card_item VILEPLUME,                2
-	card_item BELLSPROUT,               2
-	card_item WEEPINBELL,               1
-	card_item VICTREEBEL,               1
-	card_item TANGELA_LV8,              2
-	card_item TANGELA_LV12,             1
-	card_item LICKITUNG,                2
+	card_item GRASS_ENERGY,            18
+	card_item DOUBLE_COLORLESS_ENERGY,  4
+	card_item NIDORANF, 			    4
+	card_item NIDORINA, 			    2
+	card_item NIDOQUEEN, 			    2
+	card_item NIDORANM, 			    4
+	card_item NIDORINO, 			    3
+	card_item NIDOKING, 			    4
+	card_item KANGASKHAN,               4
 	card_item POKEMON_TRADER,           2
-	card_item POKEMON_BREEDER,          3
-	card_item ENERGY_SEARCH,            1
-	card_item SWITCH,                   2
-	card_item POTION,                   2
-	card_item FULL_HEAL,                1
+	card_item POKEMON_BREEDER,          4
+	card_item PROFESSOR_OAK,            3
+	card_item BILL,					    4
+	card_item SWITCH,                   3
+	card_item POTION,                   3
+	card_item ENERGY_REMOVAL,           4
 	deck_list_end
 	tx FlowerGardenDeckName
 

@@ -1956,18 +1956,10 @@ AIDecide_PokemonBreeder:
 ; stage 2 Pokemon cards
 	ld d, a
 	call LoadCardDataToBuffer1_FromDeckIndex
-	cp VENUSAUR_LV64
+	ld a, [wLoadedCard1Stage]
+	cp STAGE2
 	jr z, .found
-	cp VENUSAUR_LV67
-	jr z, .found
-	cp BLASTOISE
-	jr z, .found
-	cp VILEPLUME
-	jr z, .found
-	cp ALAKAZAM
-	jr z, .found
-	cp GENGAR
-	jr nz, .loop_hand_1
+	jr .loop_hand_1
 
 .found
 	ld a, DUELVARS_NUMBER_OF_POKEMON_IN_PLAY_AREA
