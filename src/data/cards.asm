@@ -293,7 +293,7 @@ IvysaurCard:
 	db DIAMOND ; rarity
 	db EVOLUTION | NONE ; sets
 	db IVYSAUR
-	db 60 ; hp
+	db 70 ; hp
 	db STAGE1 ; stage
 	tx BulbasaurName ; pre-evo name
 
@@ -313,7 +313,7 @@ IvysaurCard:
 	
 
 	; attack 2
-	energy GRASS, 2, COLORLESS, 1 ; energies
+	energy GRASS, 1, COLORLESS, 2 ; energies
 	tx VineWhipName ; name
 	dw NONE ; description
 	dw NONE ; description (cont)
@@ -1621,7 +1621,7 @@ BellsproutCard:
 	db EVOLUTION | JUNGLE ; sets
 	db BELLSPROUT
 	db 50 ; hp
-	db BASIC ; stage
+	db BASIC ; stagepoke
 	dw NONE ; pre-evo name
 
 	; attack 1
@@ -1722,7 +1722,7 @@ VictreebelCard:
 	db STAR ; rarity
 	db EVOLUTION | JUNGLE ; sets
 	db VICTREEBEL
-	db 30 ; hp
+	db 90 ; hp
 	db STAGE2 ; stage
 	tx WeepinbellName ; pre-evo name
 

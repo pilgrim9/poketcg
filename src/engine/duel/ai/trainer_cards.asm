@@ -2282,10 +2282,10 @@ AIPlay_ProfessorOak:
 ; sets carry if AI determines a score of playing
 ; Professor Oak is over a certain threshold.
 AIDecide_ProfessorOak:
-; return if cards in deck <= 6
+; return if cards in deck <= 5
 	ld a, DUELVARS_NUMBER_OF_CARDS_NOT_IN_DECK
 	call GetTurnDuelistVariable
-	cp DECK_SIZE - 6
+	cp DECK_SIZE - 5
 	ret nc
 
 	ld a, [wOpponentDeckID]
@@ -2296,10 +2296,10 @@ AIDecide_ProfessorOak:
 	cp WONDERS_OF_SCIENCE_DECK_ID
 	jp z, .HandleWondersOfScienceDeck
 
-; return if cards in deck <= 14
+; return if cards in deck <= 12
 .check_cards_deck
 	ld a, [hl]
-	cp DECK_SIZE - 14
+	cp DECK_SIZE - 12
 	ret nc
 
 ; initialize score

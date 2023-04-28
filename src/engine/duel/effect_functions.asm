@@ -9174,28 +9174,32 @@ CheckIfCardIsBasicEnergy:
 	ret
 
 ProfessorOakEffect:
-; discard hand
+; Shuffle hand
 	call CreateHandCardList
 	call SortCardsInDuelTempListByID
+
+; first return all cards in hand to the deck.
 	ld hl, wDuelTempList
-.discard_loop
+.loop_return_deck
 	ld a, [hli]
 	cp $ff
-	jr z, .draw_cards
+	jr z, .done_return
 	call RemoveCardFromHand
-	call PutCardInDiscardPile
-	jr .discard_loop
+	call ReturnCardToDeck
+	jr .loop_return_deck
 
-.draw_cards
-	ld a, 7
+; then draw 7 cards from the deck.
+.done_return
+	call Func_2c0bd
+	ld a, 6
 	bank1call DisplayDrawNCardsScreen
-	ld c, 7
-.draw_loop
+	ld c, 6
+.loop_draw
 	call DrawCardFromDeck
 	jr c, .done
 	call AddCardToHand
 	dec c
-	jr nz, .draw_loop
+	jr nz, .loop_draw
 .done
 	ret
 

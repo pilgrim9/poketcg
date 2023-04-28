@@ -1197,8 +1197,8 @@ ProfessorOakName:
 	done
 
 ProfessorOakDescription:
-	text "Discard your hand, then draw 7"
-	line "cards."
+	text "Shuffle your hand into your deck,"
+	line "then draw 6 cards."
 	done
 
 ImposterProfessorOakName:
@@ -1315,11 +1315,11 @@ MysteriousFossilDescription:
 MysteriousFossilDescriptionCont:
 	text "If Mysterious Fossil is Knocked Out,"
 	line "it doesn't count as a Knocked Out"
-	line "Pokémon. (Discard it anyway.) At any"
-	line "time during your turn before your"
-	line "attack, you may discard Mysterious"
-	line "Fossil from play. (Use GameBoy Poké-"
-	line "mon Power menu option to do this.)"
+	line "Pokémon. At any time during your"
+	line "turn before your attack, you may"
+	line "discard Mysterious Fossil from play."
+	line "(Use the Poké-mon Power menu option"
+	line "to do this.)"
 	done
 
 EnergyRetrievalName:

@@ -45,21 +45,21 @@ AIActionTable_GoGoRainDance:
 	db $00
 
 .list_retreat
-	ai_retreat MAGIKARP,  31
-	ai_retreat SQUIRTLE,  10
-	ai_retreat WARTORTLE, 10
-	ai_retreat LAPRAS, 3
-	ai_retreat BLASTOISE, 5
-	ai_retreat GYARADOS,  0
+	ai_retreat MAGIKARP,  0
+	ai_retreat SQUIRTLE,  3
+	ai_retreat WARTORTLE, 3
+	ai_retreat LAPRAS, 4
+	ai_retreat BLASTOISE, 8
+	ai_retreat GYARADOS,  10
 	db $00
 
 .list_energy
 	ai_energy SQUIRTLE,  1, +0
-	ai_energy WARTORTLE, 3, +0
-	ai_energy BLASTOISE, 5, +1
+	ai_energy WARTORTLE, 0, +0
+	ai_energy BLASTOISE, 5, +5
 	ai_energy GYARADOS,  4, +10
 	ai_energy MAGIKARP,  2, +3
-	ai_energy LAPRAS,    2, +0
+	ai_energy LAPRAS,    2, +2
 	db $00
 
 .list_prize
