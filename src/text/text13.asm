@@ -176,7 +176,6 @@ RecycleName:
 	done
 
 RecycleDescription:
-	text "Flip a coin. If heads, put a card"
-	line "in your discard pile on top of your"
-	line "deck."
+	text "Put a card from your discard pile "
+	line "on top of your deck."
 	done

@@ -10524,8 +10524,8 @@ Recycle_DiscardPileCheck:
 
 Recycle_PlayerSelection:
 	ldtx de, TrainerCardSuccessCheckText
-	call Func_2c08a
-	jr nc, .tails
+	;call Func_2c08a
+	;jr nc, .tails
 
 	call CreateDiscardPileCardList
 	bank1call Func_5591
