@@ -10799,7 +10799,7 @@ DevolutionSpray_DevolutionEffect:
 	call ResetDevolvedCardStatus
 	pop hl
 	ld a, [hli]
-	call PutCardInDiscardPile
+	call AddCardToHand
 	jr .loop_devolutions
 
 .check_ko

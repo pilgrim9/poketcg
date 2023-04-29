@@ -82,9 +82,10 @@ DevolutionSprayName:
 
 DevolutionSprayDescription:
 	text "Choose 1 of your own Pokémon in play"
-	line "and a Stage of Evolution. Discard"
+	line "and a Stage of Evolution. Return"
 	line "all Evolution cards of that Stage or"
 	line "higher attached to that Pokémon."
+	line "to your hand."
 	done
 
 DevolutionSprayDescriptionCont:
