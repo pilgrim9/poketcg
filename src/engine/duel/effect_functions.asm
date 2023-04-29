@@ -10523,7 +10523,7 @@ Recycle_DiscardPileCheck:
 	ret
 
 Recycle_PlayerSelection:
-	ldtx de, TrainerCardSuccessCheckText
+	;ldtx de, TrainerCardSuccessCheckText
 	;call Func_2c08a
 	;jr nc, .tails
 
