@@ -8993,6 +8993,13 @@ EnergyRemoval_AISelection:
 	ret
 
 EnergyRemoval_DiscardEffect:
+; Flip coin	
+	ldtx de, TrainerCardSuccessCheckText
+	call Func_2c08a
+	or a
+	ret z
+
+; Remove the energy card from the opponent's Pokemon
 	call SwapTurn
 	ldh a, [hTempPlayAreaLocation_ffa1]
 	call PutCardInDiscardPile
@@ -11121,6 +11128,11 @@ GustOfWind_PlayerSelection:
 	ret
 
 GustOfWind_SwitchEffect:
+; Flip coin	
+	ldtx de, TrainerCardSuccessCheckText
+	call Func_2c08a
+	or a
+	ret z
 ; play whirlwind animation
 	ld a, ATK_ANIM_GUST_OF_WIND
 	call Func_2fea9

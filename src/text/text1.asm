@@ -469,7 +469,7 @@ ThereAreNoBasicPokemonInHand:
 
 NeitherPlayerHasBasicPkmnText:
 	text "Neither player has any Basic"
-	line "Pokémon in his or her hand."
+	line "Pokémon in their hand."
 	done
 
 ReturnCardsToDeckAndDrawAgainText:

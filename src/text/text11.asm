@@ -226,7 +226,7 @@ ClairvoyanceName:
 	done
 
 ClairvoyanceDescription:
-	text "Your opponent plays with his or her"
+	text "Your opponent plays with their"
 	line "hand face up. This power stops"
 	line "working while Omanyte is Asleep,"
 	line "Confused, or Paralyzed."
@@ -1177,9 +1177,9 @@ WailName:
 	done
 
 WailDescription:
-	text "Each player fills his or her Bench"
+	text "Each player fills their Bench"
 	line "with Basic Pokémon chosen at random"
-	line "from his or her deck. If a player"
+	line "from their deck. If a player"
 	line "has fewer Basic Pokémon than that in"
 	line "his or deck, he or she chooses all"
 	line "of them. Each player shuffles his"

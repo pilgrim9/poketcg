@@ -1206,8 +1206,8 @@ ImposterProfessorOakName:
 	done
 
 ImposterProfessorOakDescription:
-	text "Your opponent shuffles his or her"
-	line "hand into his or her deck, then"
+	text "Your opponent shuffles their"
+	line "hand into their deck, then"
 	line "draws 7 cards."
 	done
 
@@ -1306,10 +1306,10 @@ MysteriousFossilDescription:
 	text "Play Mysterious Fossil as if it were"
 	line "a Basic Pokémon. While in play,"
 	line "Mysterious Fossil counts as a"
-	line "Pokémon (instead of a Trainer card)."
-	line "Mysterious Fossil has no attacks,"
-	line "can't retreat, and can't be Asleep,"
-	line "Confused, Paralyzed, or Poisoned."
+	line "Pokémon. Mysterious Fossil has"
+	line "no attacks, can't retreat,"
+	line "and can't be Asleep, Confused,"
+	line "Paralyzed, or Poisoned."
 	done
 
 MysteriousFossilDescriptionCont:
@@ -1357,8 +1357,9 @@ EnergyRemovalName:
 	done
 
 EnergyRemovalDescription:
-	text "Choose 1 Energy card attached to 1"
-	line "of your opponent's Pokémon and"
+	text "Flip a coin. If heads, choose 1"
+	line "energy card attached to 1 of"
+	line "your opponent's Pokémon and"
 	line "discard it."
 	done
 
@@ -1368,10 +1369,10 @@ SuperEnergyRemovalName:
 
 SuperEnergyRemovalDescription:
 	text "Discard 1 Energy card attached to 1"
-	line "of your own Pokémon in order to"
-	line "choose 1 of your opponent's Pokémon"
-	line "and up to 2 Energy cards attached"
-	line "to it. Discard those Energy cards."
+	line "of your own Pokémon, choose 1 of your"
+	line "opponent's Pokémon and up to 2 Energy"
+	line "cards attached to it. Discard those"
+	line "Energy cards."
 	done
 
 SwitchName:

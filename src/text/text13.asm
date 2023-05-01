@@ -71,9 +71,10 @@ GustOfWindName:
 	done
 
 GustOfWindDescription:
-	text "Choose 1 of your opponent's Benched"
-	line "Pokémon and switch it with his or"
-	line "her Active Pokémon."
+	text "Flip a coin. If heads, choose 1"
+	line "of your opponent's Benched Pokémon"
+	line "and switch it with their Active"
+	line "Pokémon."
 	done
 
 DevolutionSprayName:
@@ -156,7 +157,7 @@ PokemonFluteName:
 PokemonFluteDescription:
 	text "Choose 1 Basic Pokémon card from"
 	line "your opponent's discard pile and put"
-	line "it onto his or her Bench. (You can't"
+	line "it onto their Bench. (You can't"
 	line "play Pokémon Flute if your"
 	line "opponent's Bench is full.)"
 	done

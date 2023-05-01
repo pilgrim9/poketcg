@@ -475,7 +475,7 @@ Text04d6:
 	line "is unable to do anything."
 	line "It cannot retreat, attack or use"
 	line "Pokémon Power, but the player may"
-	line "use any cards in his or her hand."
+	line "use any cards in their hand."
 	line "Paralysis lasts until the end of "
 	line "the paralyzed player's turn. "
 	line "Paralysis can be healed with"

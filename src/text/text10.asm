@@ -516,7 +516,7 @@ LureName:
 VictreebelsLureDescription:
 	text "If your opponent has any Benched"
 	line "Pokémon, choose 1 of them and switch"
-	line "it with his or her Active Pokémon."
+	line "it with their Active Pokémon."
 	done
 
 AcidName:
@@ -903,15 +903,15 @@ MixUpDescription:
 	text "If your opponent has any Basic"
 	line "Pokémon or Evolution cards in his"
 	line "or her hand, your opponent shuffles"
-	line "them into his or her deck. Then,"
+	line "them into their deck. Then,"
 	line "your opponent puts an equal number"
 	line "of Basic Pokémon or Evolution cards"
 	line "chosen at random from his or"
 	done
 
 MixUpDescriptionCont:
-	text "her deck into his or her hand. Your"
-	line "opponent shuffles his or her deck"
+	text "her deck into their hand. Your"
+	line "opponent shuffles their deck"
 	line "afterward."
 	done
 
@@ -1288,7 +1288,7 @@ HeadacheName:
 
 HeadacheDescription:
 	text "Your opponent can't play Trainer"
-	line "cards during his or her next turn."
+	line "cards during their next turn."
 	done
 
 DuckName:
