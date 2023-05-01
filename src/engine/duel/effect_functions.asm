@@ -9174,6 +9174,10 @@ CheckIfCardIsBasicEnergy:
 	ret
 
 ProfessorOakEffect:
+; discard OAK from hand
+	ldh a, [hTempCardIndex_ff9f]
+	call RemoveCardFromHand
+	call PutCardInDiscardPile
 ; Shuffle hand
 	call CreateHandCardList
 	call SortCardsInDuelTempListByID
