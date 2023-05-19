@@ -3038,7 +3038,7 @@ GolduckHyperBeam_DiscardEffect:
 	ret
 
 SeadraWaterGunEffect:
-	lb bc, 1, 1
+	lb bc, 1, 0
 	jp ApplyExtraWaterEnergyDamageBonus
 
 SeadraAgilityEffect:
@@ -10616,10 +10616,7 @@ Revive_PlaceInPlayAreaEffect:
 	add DUELVARS_ARENA_CARD_HP
 	call GetTurnDuelistVariable
 	srl a
-	bit 0, a
-	jr z, .rounded
-	add 5 ; round up HP to nearest 10
-.rounded
+	add 10 ; round up HP to nearest 10
 	ld [hl], a
 	call IsPlayerTurn
 	ret c ; done if Player played Revive

@@ -134,10 +134,9 @@ ReviveName:
 ReviveDescription:
 	text "Put 1 Basic Pokémon card from your"
 	line "discard pile onto your Bench."
-	line "Put damage counters on that Pokémon"
-	line "equal to half its HP (rounded down"
-	line "to the nearest 10). (You can't play"
-	line "Revive if your Bench is full.)"
+	line "Put a damage counter on that Pokémon"
+	line "(You can't play Revive if your Bench"
+	line "is full.)"
 	done
 
 MaintenanceName:
